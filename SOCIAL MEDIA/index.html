@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.google.com/share?query=nu">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <title>SOCIAL_MEDIA_DASHBOARD</title>
+</head>
+<div>
+    <!--navbar---->
+    <nav class="navbar">
+     <div class="nav-left">
+        <i  class = "menu-btn fas fa-bars"></i>
+        <h2 class = "logo">KAINATBoard</h2>
+     </div>
+     <div class="nav-right">
+        <div class="search">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="search....">
+        </div>
+        <div class="notification">
+            <i class="fas fa-bell"></i>
+        </div>
+     </div>
+    </nav>
+  <div class="container">
+    <!---sidebar-->
+    <div class="sidebar">
+        <div class="profile">
+        <img src="images.jpg" alt="my pic">
+        <h3>kainat</h3>
+        <p>content Creator</p>
+        </div>
+        <div class="menu">
+        <div class="menu-detail menu-active">
+             <a href="#">
+                <i class = "fa fa-chart-pie menu-icon"></i>
+                <span> DashBoard</span>
+             </a>
+        </div>
+        <div class="menu-detail">
+            <a href="#">
+                <i class="fa fa-gift menu-icon"></i>
+                <span> Campaign</span>
+            </a>
+        </div>
+        <div class="menu-detail">
+            <a href="#">
+                <i class="fa fa-headset menu-icon"></i>
+                <span> Support</span>
+            </a>
+        </div>
+        <div class="menu-detail">
+            <a href="#">
+                <i class="fa fa-user-secret menu-icon"></i>
+                <span> Security</span>  
+            </a>
+        </div>
+        <div class="menu-detail">
+            <a href="#">
+                <i class="fa fa-cog menu-icon"></i>
+                <span>Setting</span>
+            </a>
+        </div>
+    </div>
+</div>
+  </div>
+
+  <!--main content-->
+
+  <div class="main-container">
+    <!---left-->
+    <div class="left-container">
+         <div class="wrapper">
+            <div class="card-wrapper">
+            <div class="card">
+                <i class="fab fa-instagram  social-icon"></i>
+                <h1 class="count">2.4M</h1>
+                <small>Followers</small>
+                <div class="dropdown">
+                     <button class=" btn btn-more">
+                         <i class="fas fa-ellipsis-v" ></i>
+                     </button>
+                     <div class="dropdown-content">
+                       <a href="#">Detail</a>
+                       <a href="#">Downlod</a>
+                       <a href="#">Share</a>
+                     </div>
+                </div>
+            </div>
+            <div class="card">
+                <i class ="fab fa-youtube  social-icon" ></i>
+                <h1 class="count">1.3M</h1>
+                <small>Subscriber</small>
+                <div class="dropdown">
+                <button class=" btn btn-more">
+                    <i class="fas fa-ellipsis-v" ></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">Detail</a>
+                  <a href="#">Downlod</a>
+                  <a href="#">Share</a>
+                </div>
+            </div>
+            </div>         
+         </div>
+
+         <div class="card-wrapper">
+            <div class="card">
+             <i class="fab fa-facebook-f social-icon" ></i>
+             <h1 class = "count">2.1M</h1>
+             <small>followers</small>
+             <div class="dropdown">
+                <button class=" btn btn-more">
+                    <i class="fas fa-ellipsis-v" ></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">Detail</a>
+                  <a href="#">Downlod</a>
+                  <a href="#">Share</a>
+                </div>
+            </div>
+            </div> 
+            <div class="card">
+                <i class="fab fa-twitter social-icon" ></i>
+                <h1 class = "count">4.2M</h1>
+                <small>followers</small>
+                <div class="dropdown">
+                   <button class=" btn btn-more">
+                       <i class="fas fa-ellipsis-v" ></i>
+                   </button>
+                   <div class="dropdown-content">
+                     <a href="#">Detail</a>
+                     <a href="#">Downlod</a>
+                     <a href="#">Share</a>
+                   </div>
+               </div>
+               </div> 
+         </div>
+        </div>
+    
+    <div class="wrapper">
+        <div class="card">
+            <div class="tittle-wrapper">
+                <h3 class="tittle">Trend Data</h3>
+                <div class="filter">
+                    <a href="#" class="active">Day</a>
+                    <a href="#">Week</a>
+                    <a href="#">Month</a>
+                </div>
+            </div>
+            <div class="chart-container">
+                <div id="chline"></div>
+
+            </div>
+        </div>
+    </div>
+</div>
+    <!---right-->
+    <div class="right-container">
+        <div class="card">
+            <h3 class="tittle">Summary</h3>
+            <div id="doughnut-chart"></div>
+            <div class="chart-detail">
+                <div class="detail-wrapper">
+                    <i class="fas fa-theater-masks"></i>
+                    <p>Impression</p>
+                    <h3 class="detail-num">400k <span class="up-down blue">+64%</span></h3>
+                </div>
+                <hr class="divider">
+                <div class="detail-wrapper">
+                     <i class="fas fa-user-friends"></i>
+                    <p>Followers</p>
+                    <h3 class="detail-num">4509 <span class="up-down blue">+29%</span></h3>
+                </div>
+                <hr class="divider">
+                <div class="detail-wrapper">
+                    <i class="fas fa-shapes"></i>
+                    <p>Engagement</p>
+                    <h3 class="detail-num">123 <span class="up-down red">-13%</span></h3>
+                </div>
+                <hr class="divider">
+                <div class="detail-wrapper">
+                     <i class="fas fa-shapes"></i>
+                    <p>Likes</p>
+                    <h3 class="detail-num">478 <span class="up-down green">+7%</span></h3>
+                </div>
+                <hr class="divider">
+            </div>
+        </div>
+    
+    </div>
+    <!---bottom-->
+    <div class="bottom-container">
+        <div class="card">
+            <h3 class="tittle">Recent Upload </h3>
+            <div class="table-wrapper">
+                <table class="table">
+                    <tr>
+                        <th>Thumbnail & Description</th>
+                        <th>Dates</th>
+                        <th>View </th>
+                        <th>Comment</th>
+                        <th>Likes</th>
+                        <th>More</th>   
+                    </tr>
+                    <tr>
+                        <td class="table-tittle">
+                            <img src="download.jpg" alt="pic" class="table-image">
+                            <p>HELLO,WELCOME TO MY SOCIAL MEDIA DashBoard.
+                                LIKE SUBSRIBE AND SHARE</p>                        </td>
+                        <td>jan 1,2022</td>
+                        <td>200k</td>
+                        <td>151</td>
+                        <td>40k</td>
+                        <td><button class = "btn btn-table">Details</button></td>
+
+                    </tr>
+                    <tr>
+                        <td class="table-tittle">
+                            <img src="download (1).jpg" alt="pic" class="table-image">
+                            <p>HELLO,WELCOME TO MY SOCIAL MEDIA DashBoard.
+                                LIKE SUBSRIBE AND SHARE</p>                        </td>
+                        <td>march 25,2022</td>
+                        <td>300k</td>
+                        <td>10</td>
+                        <td>465</td>
+                        <td><button class ="btn btn-table">Details</button></td>
+
+                    </tr>
+                    <tr>
+                        <td class="table-tittle">
+                            <img src="sunflower.jpg" alt="pic" class="table-image">
+                            <p>HELLO,WELCOME TO MY SOCIAL MEDIA DashBoard.
+                                LIKE SUBSRIBE AND SHARE</p>                        </td>
+                        <td>april 6,2022</td>
+                        <td>220k</td>
+                        <td>332</td>
+                        <td>70k</td>
+                        <td><button class = "btn btn-table">Details</button></td>
+
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </div>
+  </div>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="main.js"></script>
+</html>
